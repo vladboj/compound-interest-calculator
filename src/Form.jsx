@@ -67,13 +67,12 @@ function Form() {
         {formElements.map((element) => (
           <div className="form-child" key={element.id}>
             <label htmlFor={element.id}>{element.label}</label>
-            <input id={element.id} />
+            <input type="number" min={"0"} className="form-input" id={element.id} />
           </div>
         ))}
         <div className="form-child">
           <label htmlFor="compoundFrequency">Compound Frequency</label>
-          <select id="compoundFrequency">
-            <option value="default">--Select Compound Frequency--</option>
+          <select className="form-input" id="compoundFrequency">
             <option value="anually">Anually</option>
             <option value="monthly">Monthly</option>
           </select>
@@ -83,7 +82,8 @@ function Form() {
       {/* Conditionally render the result */}
       {resultToggled && (
         <div className="result">
-          <p>The final amount you will have is ${finalAmount}</p>
+          <p>The final amount you will have is</p>
+          <p className="amount">${finalAmount}</p>
         </div>
       )}
     </>
