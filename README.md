@@ -1,1 +1,1 @@
-# compound-interest-calculator
+[Demo](https://vladboj.github.io/compound-interest-calculator)
